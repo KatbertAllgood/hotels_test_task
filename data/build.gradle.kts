@@ -1,7 +1,6 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("com.google.devtools.ksp")
 }
 
 android {
@@ -36,10 +35,6 @@ android {
 dependencies {
 
     implementation(project(":domain"))
-
-    //Hilt
-//    implementation("com.google.dagger:hilt-android:2.46.1")
-//    kapt("com.google.dagger:hilt-android-compiler:2.46.1")
 
     //Retrofit 2
     val retrofitVersion = "2.9.0"
