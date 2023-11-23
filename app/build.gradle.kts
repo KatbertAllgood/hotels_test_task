@@ -37,6 +37,10 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 dependencies {
 
     //RxJava
@@ -56,6 +60,11 @@ dependencies {
     //Hilt
     implementation("com.google.dagger:hilt-android:2.46.1")
     kapt("com.google.dagger:hilt-android-compiler:2.46.1")
+
+    //Glide
+    val glide_version = "4.15.1"
+    implementation("com.github.bumptech.glide:glide:$glide_version")
+    annotationProcessor("com.github.bumptech.glide:compiler:$glide_version")
 
     implementation(project(":data"))
     implementation(project(":domain"))
