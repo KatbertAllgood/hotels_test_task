@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.hotels_test_task"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.hotels_test_task"
@@ -29,11 +29,14 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
+    }
+    buildFeatures {
+        viewBinding = true
     }
 }
 
@@ -42,10 +45,6 @@ kapt {
 }
 
 dependencies {
-
-    //RxJava
-    implementation("io.reactivex.rxjava2:rxjava:2.2.19")
-    implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
 
     //Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
@@ -58,8 +57,8 @@ dependencies {
     implementation("androidx.fragment:fragment-ktx:1.6.2")
 
     //Hilt
-    implementation("com.google.dagger:hilt-android:2.46.1")
-    kapt("com.google.dagger:hilt-android-compiler:2.46.1")
+    implementation("com.google.dagger:hilt-android:2.48.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.48.1")
 
     //Glide
     val glide_version = "4.15.1"
