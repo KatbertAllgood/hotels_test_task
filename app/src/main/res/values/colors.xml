@@ -2,4 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="screens_background">#FFF6F6F9</color>
+    <color name="rating_five_background">#33FFC700</color>
+    <color name="yellow">#FFA800</color>
+    <color name="blue">#0D72FF</color>
+    <color name="blue_ten">#1A0D72FF</color>
+    <color name="gray">#FF828796</color>
+    <color name="gray_fifteen">#26828796</color>
+    <color name="peculiarities_item_background">#FBFBFC</color>
+    <color name="black_ninety">#E6000000</color>
+    <color name="text_tertiary">#2C3035</color>
 </resources>
