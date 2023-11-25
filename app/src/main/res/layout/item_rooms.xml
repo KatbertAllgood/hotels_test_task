@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_items_background"
+    android:layout_marginTop="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/item_rooms_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="5dp"
+            android:background="@color/white"
+            app:cardElevation="0dp">
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/item_rooms_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+
+                android:layout_marginHorizontal="10dp"
+
+                app:ci_drawable="@drawable/shape_indicator_circle"
+
+
+                android:elevation="4dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/item_rooms_room_name"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/sf_pro_medium"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+
+        tools:text="Название"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_rooms_peculiarities_rv"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_rooms_more_about_room_button"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:background="@color/blue_ten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/hotel_fragment_rating"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/sf_pro_medium"
+                android:textSize="16sp"
+                android:textColor="@color/blue"
+                android:text="@string/more_about_room"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+
+                android:src="@drawable/round_arrow_forward_blue"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="16dp"
+        android:layout_marginHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/item_rooms_price"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+
+            tools:text="@string/price"/>
+
+        <TextView
+            android:id="@+id/item_rooms_price_per"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/sf_pro_regular"
+            android:textSize="16sp"
+            android:textColor="@color/gray"
+
+            android:layout_marginStart="8dp"
+
+            tools:text="за ..."/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/item_rooms_choose_room_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/shape_button"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sf_pro_medium"
+        android:textSize="16sp"
+        android:text="@string/choose_room"/>
+
+</LinearLayout>
