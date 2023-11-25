@@ -6,4 +6,16 @@
     <string name="hotel">Отель</string>
     <string name="booking">Бронирование</string>
     <string name="order_paid">Заказ оплачен</string>
+    <string name="minimal_price">от %s ₽</string>
+    <string name="price">%s ₽</string>
+    <string name="about_hotel">Об отеле</string>
+
+    <string name="comfort">Удобства</string>
+    <string name="what_in">Что включено</string>
+    <string name="what_not_in">Что не включено</string>
+    <string name="essential">Самое необходимое</string>
+
+    <string name="to_choose_room">К выбору номера</string>
+    <string name="more_about_room">Подробнее о номере</string>
+    <string name="choose_room">Выбрать номер</string>
 </resources>
