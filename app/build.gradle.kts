@@ -46,6 +46,15 @@ kapt {
 
 dependencies {
 
+    //Flexbox
+    implementation("com.google.android.flexbox:flexbox:3.0.0")
+
+    //Viewpager Implementation
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+
+    //CircleIndicator
+    implementation("me.relex:circleindicator:2.1.6")
+
     //Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
