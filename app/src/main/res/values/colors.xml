@@ -12,4 +12,7 @@
     <color name="peculiarities_item_background">#FBFBFC</color>
     <color name="black_ninety">#E6000000</color>
     <color name="text_tertiary">#2C3035</color>
+    <color name="text_field_hint">#A9ABB7</color>
+    <color name="text_field_text_color">#14142B</color>
+    <color name="strokes">#E8E9EC</color>
 </resources>
