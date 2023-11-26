@@ -30,7 +30,10 @@
         tools:layout="@layout/fragment_paid_info" >
         <action
             android:id="@+id/action_paidInfoFragment_to_hotelFragment"
-            app:destination="@id/hotelFragment" />
+            app:destination="@id/hotelFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/roomsFragment"
