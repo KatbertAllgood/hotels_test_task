@@ -13,6 +13,7 @@ import com.example.hotels_test_task.R
 import com.example.hotels_test_task.databinding.FragmentHotelBinding
 import com.example.hotels_test_task.screens.hotel.adapters.ImageSliderAdapter
 import com.example.hotels_test_task.screens.hotel.adapters.HotelRecyclerViewAdapter
+import com.example.hotels_test_task.utils.formatNumberWithSpaces
 import com.google.android.flexbox.FlexboxLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -85,7 +86,7 @@ class HotelFragment : Fragment() {
                 hotelFragmentHotelName.text = it.name
                 hotelFragmentHotelAddress.text = it.address
 
-                hotelFragmentMinimalPrice.text = resources.getString(R.string.minimal_price, it.minimal_price.toString())
+                hotelFragmentMinimalPrice.text = resources.getString(R.string.minimal_price, formatNumberWithSpaces(it.minimal_price))
                 hotelFragmentPriceForIt.text = it.price_for_it
 
                 val peculiaritiesAdapter = HotelRecyclerViewAdapter(it.about_the_hotel.peculiarities)
