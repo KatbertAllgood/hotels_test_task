@@ -10,6 +10,7 @@ import com.example.hotels_test_task.databinding.ItemRoomsBinding
 import com.example.hotels_test_task.models.rooms.RoomPresentation
 import com.example.hotels_test_task.screens.hotel.adapters.HotelRecyclerViewAdapter
 import com.example.hotels_test_task.screens.hotel.adapters.ImageSliderAdapter
+import com.example.hotels_test_task.utils.formatNumberWithSpaces
 import com.google.android.flexbox.FlexboxLayoutManager
 
 class RoomsRecyclerViewAdapter(
@@ -36,7 +37,7 @@ class RoomsRecyclerViewAdapter(
             itemRoomsPeculiaritiesRv.isNestedScrollingEnabled = false
             itemRoomsPeculiaritiesRv.adapter = peculiaritiesAdapter
 
-            itemRoomsPrice.text = context.resources.getString(R.string.price, room.price.toString())
+            itemRoomsPrice.text = context.resources.getString(R.string.price, formatNumberWithSpaces(room.price))
             itemRoomsPricePer.text = room.price_per
 
             itemRoomsMoreAboutRoomButton.setOnClickListener {
