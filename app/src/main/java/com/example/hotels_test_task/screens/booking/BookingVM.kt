@@ -27,8 +27,13 @@ class BookingVM @Inject constructor(
     val getBookingInfo : LiveData<BookingPresentation>
         get() = bookingInfoLiveData
 
+    private val touristsList = MutableLiveData<MutableList<String>>()
+    val getTourists: LiveData<MutableList<String>>
+        get() = touristsList
+
     init {
         getBookingInfo()
+        touristsList.postValue(mutableListOf("1"))
     }
 
     private fun getBookingInfo() {
@@ -41,5 +46,11 @@ class BookingVM @Inject constructor(
                 bookingInfoLiveData.postValue(it)
             }
         }
+    }
+
+    fun addTourist(i: String) {
+        val currentList = touristsList.value!!
+        currentList.add(i)
+        touristsList.postValue(currentList)
     }
 }

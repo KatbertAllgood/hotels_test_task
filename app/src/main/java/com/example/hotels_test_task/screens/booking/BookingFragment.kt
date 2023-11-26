@@ -10,8 +10,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hotels_test_task.R
 import com.example.hotels_test_task.databinding.FragmentBookingBinding
+import com.example.hotels_test_task.screens.booking.adapters.TouristsAdapter
 import com.example.hotels_test_task.utils.formatNumberWithSpaces
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -36,6 +38,10 @@ class BookingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
+
+            bookingFragmentAddTouristButton.setOnClickListener {
+                viewModel.addTourist("1")
+            }
 
             bookingFragmentPayButton.setOnClickListener {
 
@@ -69,6 +75,17 @@ class BookingFragment : Fragment() {
                 val full_price = it.tour_price + it.fuel_charge + it.service_charge
                 bookingFragmentToBePaid.text = resources.getString(R.string.price, formatNumberWithSpaces(full_price))
                 bookingFragmentPayButton.text = resources.getString(R.string.pay_sum, formatNumberWithSpaces(full_price))
+            }
+        }
+
+        viewModel.getTourists.observe(viewLifecycleOwner) {
+
+            binding.apply {
+
+                val touristsAdapter = TouristsAdapter(it, requireContext())
+                bookingFragmentRvTourists.layoutManager = LinearLayoutManager(requireContext())
+                bookingFragmentRvTourists.isNestedScrollingEnabled = false
+                bookingFragmentRvTourists.adapter = touristsAdapter
             }
         }
     }

@@ -423,14 +423,14 @@
                 android:text="@string/add_tourist"/>
 
             <ImageView
+                android:id="@+id/booking_fragment_add_tourist_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_button_plus"
-
-                android:layout_centerInParent="true"
                 android:layout_alignParentEnd="true"
 
-                android:layout_marginEnd="16dp"/>
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_button_plus" />
 
         </RelativeLayout>
 
