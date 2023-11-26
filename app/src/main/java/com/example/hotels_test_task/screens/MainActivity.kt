@@ -1,17 +1,13 @@
 package com.example.hotels_test_task.screens
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import com.example.data.utils.Constants
 import com.example.hotels_test_task.R
 import com.example.hotels_test_task.databinding.ActivityMainBinding
 import com.example.hotels_test_task.screens.hotel.HotelFragment
@@ -64,9 +60,7 @@ class MainActivity : AppCompatActivity(), HotelFragment.OnDataPass {
                     toolbarTitle.text = hotelName
                     toolbarBackButton.visibility = View.VISIBLE
                 }
-                else -> {
-
-                }
+                else -> {}
             }
         }
     }
